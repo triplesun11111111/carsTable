@@ -1,42 +1,43 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        body {
+            background-color: white;
+        }
+        .button {
+            display: inline-block;
+            padding: 40px 80px;
+            background-color: fuchsia;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: crosshair;
+            font-size: 32px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: darkslateblue;
+        }
+        img {
+            position: relative;
+            margin-top: 20px;
+            margin-right: 100px;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-<style>
-    body {
-        background-color: darkslateblue;
-    }
-</style>
-<title>Кнопка-ссылка</title>
-<style>
-    .button {
-        display: ruby-text;
-        padding: 40px 80px;
-        background-color: fuchsia;
-        color: black;
-        text-align: center;
-        text-decoration: none;
-        text-decoration-color: bisque;
-        text-decoration-style: solid;
-        border-radius: 5px;
-        cursor: crosshair;
-        font-size: 32px;
-        transition: background-color 0.3s;
-    }
-    .button:hover {
-        background-color: darkslateblue;
-    }
-</style>
 <div>
     <th:block th:each="msg : ${messages}">
         <h1 th:text="${msg}"></h1>
     </th:block>
 </div>
-</body>
-<a href="cars"> Cars </a>
+<img th:src="@{/images/image.jpg}" alt="Car Image">
+<a href="cars"></a>
 <a href="cars" class="button">Cars</a>
+</body>
 </html>
