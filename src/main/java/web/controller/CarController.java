@@ -34,7 +34,7 @@ public class CarController implements CarService {
 
         if (count > 0 && count <= 5) {
             cars = cars.subList(0, count);
-        } else if (count > 0 && count > 5) {
+        } else if (count > 5) {
             cars = cars;
         }
         model.addAttribute("cars", cars);
