@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cars</title>
+  <style>
+    body {
+      background-color: sandybrown;
+      padding: 40px 60px;
+      color: darkslateblue;
+      text-align: center;
+      font-size: 32px;
+    }
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      margin: 20px auto;
+      font-size: 18px;
+      text-align: left;
+      color: black;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #181313;
+    }
+    th {
+      background-color: #181313;
+      color: bisque;
+    }
+  </style>
+</head>
+<body>
+<h1>Cars</h1>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>MODEL</th>
+    <th>COLOR</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="car : ${cars}">
+    <td th:text="${car.id}"></td>
+    <td th:text="${car.model}"></td>
+    <td th:text="${car.color}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
